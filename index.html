@@ -1,0 +1,126 @@
+<html>
+    <canvas id="canvas" width="1920" height="1080"></canvas>
+        <script>
+        function draw() 
+        {
+            var canvas = document.getElementById('canvas');
+            if (canvas.getContext)
+            {
+                var ctx = canvas.getContext('2d');
+
+                //Cono - Triangulo
+                ctx.beginPath();
+                ctx.moveTo(50,200);
+                ctx.lineTo(200,200);
+                ctx.lineTo(125,50);
+                ctx.closePath();
+                ctx.fillStyle="#FF0000";
+                ctx.fill();
+
+                //Cono - Elipse
+                ctx.beginPath();
+                ctx.ellipse(125,200,75,35,0,0,Math.PI*2);
+                ctx.fillStyle="#EE6767";
+                ctx.fill();
+
+                //Triangulo
+                ctx.beginPath();
+                ctx.moveTo(250,200);
+                ctx.lineTo(400,200);
+                ctx.lineTo(325,50);
+                ctx.closePath();
+                ctx.fillStyle="#FF0000";
+                ctx.fill();
+
+                //Elipse
+                ctx.beginPath();
+                ctx.ellipse(325,250,75,35,0,0,Math.PI*2);
+                ctx.fillStyle="#EE6767";
+                ctx.fill();
+
+                //Cono Transformación
+                ctx.save();
+                ctx.beginPath();
+                ctx.translate(300,80);
+                ctx.rotate((Math.PI/180)*45);
+                ctx.moveTo(50,400);
+                ctx.lineTo(200,400);
+                ctx.lineTo(125,250);
+                ctx.closePath();
+                ctx.fillStyle="#FF0000";                
+                ctx.fill();
+
+                //Cono Transformación
+                ctx.beginPath();
+                ctx.ellipse(125,400,75,35,0,0,Math.PI*2);
+                ctx.fillStyle="#EE6767";
+                ctx.fill();
+                ctx.restore();
+
+                //Piramide - Triangulo_1
+                ctx.restore();
+                ctx.beginPath();
+                ctx.moveTo(550,200);
+                ctx.lineTo(700,200);
+                ctx.lineTo(625,50);
+                ctx.closePath();
+                ctx.fillStyle="#00C9FF";
+                ctx.fill();
+
+                //Piramide - Triangulo_2
+                ctx.beginPath();
+                ctx.moveTo(700,200);
+                ctx.lineTo(750,150);
+                ctx.lineTo(625,50);
+                ctx.closePath();
+                ctx.fillStyle="#71CCE4";
+                ctx.fill();
+
+                //Triangulo_1
+                ctx.beginPath();
+                ctx.moveTo(750,200);
+                ctx.lineTo(900,200);
+                ctx.lineTo(825,50);
+                ctx.closePath();
+                ctx.fillStyle="#00C9FF";
+                ctx.fill();
+
+                //Triangulo_2
+                ctx.beginPath();
+                ctx.moveTo(925,200);
+                ctx.lineTo(975,150);
+                ctx.lineTo(850,50);
+                ctx.closePath();
+                ctx.fillStyle="#71CCE4";
+                ctx.fill();
+
+                //Piramide Transformación
+                ctx.save();
+                ctx.beginPath();
+                ctx.rotate((Math.PI/180)*45);
+                ctx.translate(-450,-900);
+                ctx.scale(2,2);
+                ctx.moveTo(550,400);
+                ctx.lineTo(700,400);
+                ctx.lineTo(625,250);
+                ctx.closePath();
+                ctx.fillStyle="#00C9FF";
+                ctx.fill();
+
+                //Piramide Transformación
+                ctx.beginPath();
+                ctx.moveTo(700,400);
+                ctx.lineTo(750,350);
+                ctx.lineTo(625,250);
+                ctx.closePath();
+                ctx.fillStyle="#71CCE4";
+                ctx.fill();
+                ctx.restore();
+
+
+            }
+        }
+        draw();
+    </script>
+</html>
+
